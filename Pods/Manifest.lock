@@ -1,0 +1,15 @@
+PODS:
+  - CrossroadRegex (1.1.0)
+  - SwiftyJSON (4.0.0)
+
+DEPENDENCIES:
+  - CrossroadRegex
+  - SwiftyJSON
+
+SPEC CHECKSUMS:
+  CrossroadRegex: 5eaadb3f7b4014728f1cbd1014756b126c1dbd9a
+  SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
+
+PODFILE CHECKSUM: dac1cc7d207911c987c6a56b600a2f46d69efc01
+
+COCOAPODS: 1.4.0
