@@ -1,9 +1,9 @@
 //
 //  REST_API_ConfigManager.swift
-//  Nurse App
+//  Weather 5D
 //
 //  Created by Aldo Bergamini on 14/11/2016.
-//  Copyright © 2016 IMS Maxims. All rights reserved.
+//  Copyright © 2016 iBat. All rights reserved.
 //
 
 import Foundation
@@ -106,7 +106,7 @@ class REST_API_ConfigManager {
         
         let resourceReader = RestAPIConfigReader()
         
-        resourceReader.loadDataFile("IMSLinkAPI_metadata")
+        resourceReader.loadDataFile("OpenWeatherMapAPI_metadata")
 
         let configData = resourceReader.configData
         if let configData = configData {
@@ -121,7 +121,7 @@ class REST_API_ConfigManager {
        
         if let authToken = authToken {
             
-            let tokenString = String(format: "Bearer %@", authToken)
+            let tokenString = String(format: "appid %@", authToken)
             let resultHeaders = ["Content-Type": "application/json", "Authorization" : tokenString]
         
             return resultHeaders

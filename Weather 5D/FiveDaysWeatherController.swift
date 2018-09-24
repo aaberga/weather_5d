@@ -33,7 +33,7 @@ class FiveDaysWeatherController: UIViewController, UITextFieldDelegate {
     // MARK: IBOutlets
 
     @IBOutlet weak var targetCity: UITextField!
-    @IBOutlet weak var forecast: UITextView!
+    @IBOutlet weak var forecast: UITableView!
     
     // MARK: TextField Delegate Methods
     
@@ -41,7 +41,7 @@ class FiveDaysWeatherController: UIViewController, UITextFieldDelegate {
         
         if textField == self.targetCity {
             
-            self.forecast.text = ""
+            //self.forecast.text = ""
         }
         return true
     }
@@ -70,6 +70,6 @@ extension FiveDaysWeatherController: FiveDaysWeatherForecastDisplay {
     
     func displayForecast(_ expectedSituation: String) {
         
-        self.forecast.text = expectedSituation
+        //self.forecast.text = expectedSituation
     }
 }
