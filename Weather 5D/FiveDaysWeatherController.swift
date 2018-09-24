@@ -16,7 +16,7 @@ protocol FiveDaysWeatherForecastDelegate: class {
 
 protocol FiveDaysWeatherForecastDisplay: class {
     
-    func displayForecast(_ expectedSituation: String)
+    func displayForecast(from tableDelegate: UITableViewDelegate, with tableDataSource: UITableViewDataSource)
 }
 
 
@@ -64,12 +64,25 @@ class FiveDaysWeatherController: UIViewController, UITextFieldDelegate {
             }
         }
     }
+    
+    
+    // MARK: Private Properties
+    
+    var tableViewDelegate: UITableViewDelegate?
+    var tableViewDataSource: UITableViewDataSource?
+
 }
 
 extension FiveDaysWeatherController: FiveDaysWeatherForecastDisplay {
     
-    func displayForecast(_ expectedSituation: String) {
+    func displayForecast(from tableDelegate: UITableViewDelegate, with tableDataSource: UITableViewDataSource) {
         
-        //self.forecast.text = expectedSituation
+        self.tableViewDelegate = tableDelegate
+        self.tableViewDataSource = tableDataSource
+
+        self.forecast.delegate = self.tableViewDelegate
+        self.forecast.dataSource = self.tableViewDataSource
+        
+        self.forecast.reloadData()
     }
 }

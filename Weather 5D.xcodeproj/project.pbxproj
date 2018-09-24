@@ -8,14 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		0E5B91792D4EA63ADCD2B55A /* Pods_Weather_5DTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24984755016795548C3829A9 /* Pods_Weather_5DTests.framework */; };
-		1B7389752153AF88008CE2B4 /* GenericRequestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7389742153AF88008CE2B4 /* GenericRequestController.swift */; };
-		1B7389772153B0A1008CE2B4 /* REST_API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7389762153B0A1008CE2B4 /* REST_API.swift */; };
-		1B7389792153B0DA008CE2B4 /* PAW_REST_Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7389782153B0DA008CE2B4 /* PAW_REST_Helpers.swift */; };
-		1BA1D4D12153B4DC00406F76 /* REST_ResponseProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA1D4D02153B4DC00406F76 /* REST_ResponseProcessor.swift */; };
-		1BA1D4D32153C8CC00406F76 /* REST_API_ConfigManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA1D4D22153C8CB00406F76 /* REST_API_ConfigManager.swift */; };
-		1BA1D4D52153C97A00406F76 /* REST_APIConfigReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA1D4D42153C97A00406F76 /* REST_APIConfigReader.swift */; };
 		1BA1D4D82153FC1E00406F76 /* OpenWeatherMapAPI_metadata.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1BA1D4D72153FC1E00406F76 /* OpenWeatherMapAPI_metadata.plist */; };
 		1BA1D4DA215407E200406F76 /* OpenWeatherMapSampleData.json in Resources */ = {isa = PBXBuildFile; fileRef = 1BA1D4D9215407E200406F76 /* OpenWeatherMapSampleData.json */; };
+		1BAC124C2158F89000CBB77D /* LoggingMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BAC124B2158F89000CBB77D /* LoggingMethods.swift */; };
+		1BAC124E2159063900CBB77D /* OpenWeatherMap_5Days_API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BAC124D2159063900CBB77D /* OpenWeatherMap_5Days_API.swift */; };
+		1BAC125121592F5900CBB77D /* CityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BAC125021592F5900CBB77D /* CityModel.swift */; };
+		1BAC125321592FC300CBB77D /* ServiceResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BAC125221592FC300CBB77D /* ServiceResponse.swift */; };
+		1BAC12552159303700CBB77D /* ForecastPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BAC12542159303700CBB77D /* ForecastPoint.swift */; };
 		1BD626D42152AEF000C1CE78 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD626D32152AEF000C1CE78 /* AppDelegate.swift */; };
 		1BD626D62152AEF000C1CE78 /* FiveDaysWeatherController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD626D52152AEF000C1CE78 /* FiveDaysWeatherController.swift */; };
 		1BD626D92152AEF000C1CE78 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BD626D72152AEF000C1CE78 /* Main.storyboard */; };
@@ -43,14 +42,13 @@
 
 /* Begin PBXFileReference section */
 		06A7365F7D2A4222C7A3BE4B /* Pods-Weather 5D.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Weather 5D.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Weather 5D/Pods-Weather 5D.debug.xcconfig"; sourceTree = "<group>"; };
-		1B7389742153AF88008CE2B4 /* GenericRequestController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericRequestController.swift; sourceTree = "<group>"; };
-		1B7389762153B0A1008CE2B4 /* REST_API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = REST_API.swift; sourceTree = "<group>"; };
-		1B7389782153B0DA008CE2B4 /* PAW_REST_Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PAW_REST_Helpers.swift; sourceTree = "<group>"; };
-		1BA1D4D02153B4DC00406F76 /* REST_ResponseProcessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = REST_ResponseProcessor.swift; sourceTree = "<group>"; };
-		1BA1D4D22153C8CB00406F76 /* REST_API_ConfigManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = REST_API_ConfigManager.swift; sourceTree = "<group>"; };
-		1BA1D4D42153C97A00406F76 /* REST_APIConfigReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = REST_APIConfigReader.swift; sourceTree = "<group>"; };
 		1BA1D4D72153FC1E00406F76 /* OpenWeatherMapAPI_metadata.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = OpenWeatherMapAPI_metadata.plist; sourceTree = "<group>"; };
 		1BA1D4D9215407E200406F76 /* OpenWeatherMapSampleData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = OpenWeatherMapSampleData.json; sourceTree = "<group>"; };
+		1BAC124B2158F89000CBB77D /* LoggingMethods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggingMethods.swift; sourceTree = "<group>"; };
+		1BAC124D2159063900CBB77D /* OpenWeatherMap_5Days_API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenWeatherMap_5Days_API.swift; sourceTree = "<group>"; };
+		1BAC125021592F5900CBB77D /* CityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityModel.swift; sourceTree = "<group>"; };
+		1BAC125221592FC300CBB77D /* ServiceResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceResponse.swift; sourceTree = "<group>"; };
+		1BAC12542159303700CBB77D /* ForecastPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastPoint.swift; sourceTree = "<group>"; };
 		1BD626D02152AEEF00C1CE78 /* Weather 5D.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Weather 5D.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BD626D32152AEF000C1CE78 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1BD626D52152AEF000C1CE78 /* FiveDaysWeatherController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiveDaysWeatherController.swift; sourceTree = "<group>"; };
@@ -97,12 +95,7 @@
 		1B7389732153AF77008CE2B4 /* API Calls */ = {
 			isa = PBXGroup;
 			children = (
-				1B7389742153AF88008CE2B4 /* GenericRequestController.swift */,
-				1B7389762153B0A1008CE2B4 /* REST_API.swift */,
-				1BA1D4D02153B4DC00406F76 /* REST_ResponseProcessor.swift */,
-				1BA1D4D22153C8CB00406F76 /* REST_API_ConfigManager.swift */,
-				1BA1D4D42153C97A00406F76 /* REST_APIConfigReader.swift */,
-				1B7389782153B0DA008CE2B4 /* PAW_REST_Helpers.swift */,
+				1BAC124D2159063900CBB77D /* OpenWeatherMap_5Days_API.swift */,
 			);
 			path = "API Calls";
 			sourceTree = "<group>";
@@ -114,6 +107,16 @@
 				1BA1D4D72153FC1E00406F76 /* OpenWeatherMapAPI_metadata.plist */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1BAC124F2159227A00CBB77D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1BAC125221592FC300CBB77D /* ServiceResponse.swift */,
+				1BAC125021592F5900CBB77D /* CityModel.swift */,
+				1BAC12542159303700CBB77D /* ForecastPoint.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		1BD626C72152AEEF00C1CE78 = {
@@ -142,6 +145,7 @@
 				1BF9AB7821540A9F004C1E89 /* Helpers */,
 				1B7389732153AF77008CE2B4 /* API Calls */,
 				1BD626F42152B20300C1CE78 /* DataServices */,
+				1BAC124F2159227A00CBB77D /* Models */,
 				1BD626F32152B1DB00C1CE78 /* Coordinators */,
 				1BA1D4D62153FBFB00406F76 /* Supporting Files */,
 				1BD626D32152AEF000C1CE78 /* AppDelegate.swift */,
@@ -186,6 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				1BF9AB7921540ABB004C1E89 /* Helpers.swift */,
+				1BAC124B2158F89000CBB77D /* LoggingMethods.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -428,20 +433,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BAC125321592FC300CBB77D /* ServiceResponse.swift in Sources */,
+				1BAC12552159303700CBB77D /* ForecastPoint.swift in Sources */,
 				1BD626FC2152C32600C1CE78 /* FiveDaysWeatherForecastCoordinator.swift in Sources */,
+				1BAC125121592F5900CBB77D /* CityModel.swift in Sources */,
 				1BF9AB7A21540ABB004C1E89 /* Helpers.swift in Sources */,
 				1BD626FE2152DD7900C1CE78 /* OpenWeatherMapService.swift in Sources */,
-				1BA1D4D32153C8CC00406F76 /* REST_API_ConfigManager.swift in Sources */,
 				1BD626F82152B24100C1CE78 /* Coordinator.swift in Sources */,
-				1B7389752153AF88008CE2B4 /* GenericRequestController.swift in Sources */,
+				1BAC124C2158F89000CBB77D /* LoggingMethods.swift in Sources */,
+				1BAC124E2159063900CBB77D /* OpenWeatherMap_5Days_API.swift in Sources */,
 				1BD626F62152B22800C1CE78 /* AppCoordinator.swift in Sources */,
-				1BA1D4D12153B4DC00406F76 /* REST_ResponseProcessor.swift in Sources */,
 				1BD626D62152AEF000C1CE78 /* FiveDaysWeatherController.swift in Sources */,
 				1BD626D42152AEF000C1CE78 /* AppDelegate.swift in Sources */,
 				1BD626FA2152B28C00C1CE78 /* DataService.swift in Sources */,
-				1BA1D4D52153C97A00406F76 /* REST_APIConfigReader.swift in Sources */,
-				1B7389792153B0DA008CE2B4 /* PAW_REST_Helpers.swift in Sources */,
-				1B7389772153B0A1008CE2B4 /* REST_API.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

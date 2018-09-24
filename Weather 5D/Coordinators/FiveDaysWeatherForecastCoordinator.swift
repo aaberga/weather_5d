@@ -10,7 +10,7 @@ import UIKit
 import SwiftyJSON
 
 
-class FiveDaysWeatherForecastCoordinator: Coordinator {
+class FiveDaysWeatherForecastCoordinator: NSObject, Coordinator {
     
     // MARK: Coordinator Properties
     
@@ -33,6 +33,12 @@ class FiveDaysWeatherForecastCoordinator: Coordinator {
         
         self.viewController = targetViewController
     }
+    
+    
+    // MARK: Private Coordinator Properties
+    
+    private var currentForecast: FiveDaysServiceResponse?
+    private var currentError: Error?
 }
 
 
@@ -52,21 +58,122 @@ extension FiveDaysWeatherForecastCoordinator {
     
     func displayServiceOutcome(_ result: Any?, _ error: Error?) -> Void {
     
-        if let result = result as? JSON {
+        if let obtainedForecast = result as? FiveDaysServiceResponse {
             
-//            print("Result: \(result)")
             if let viewController = self.viewController as? FiveDaysWeatherController {
                 
-                viewController.forecast.text = result.description
+//                DLogWith(message: "Weather Data: \(result)")
+                
+                self.currentForecast = obtainedForecast
+                self.currentError = nil
+                
+                DispatchQueue.main.async {
+                    
+                    viewController.displayForecast(from: self, with: self)
+                }
             }
             
         } else if let error = error {
             
-//            print("Error: \(error)")
             if let viewController = self.viewController as? FiveDaysWeatherController {
                 
-                viewController.forecast.text = error.localizedDescription
+//                DLogWith(message: "Error Data: \(error.localizedDescription)")
+                self.currentForecast = nil
+                self.currentError = error
+                
+                DispatchQueue.main.async {
+
+                    viewController.displayForecast(from: self, with: self)
+                }
             }
         }
     }
+}
+
+
+
+// MARK: - Table View DataSource
+
+extension FiveDaysWeatherForecastCoordinator: UITableViewDataSource {
+    
+    // Cells: CityCell, ForecastCell, ErrorCell
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let rowNo = indexPath.row
+        var cell: UITableViewCell!
+        
+        if rowNo == 0 {
+            
+            cell = tableView.dequeueReusableCell(withIdentifier: "CityCell", for: indexPath as IndexPath)
+            
+            let forecastCity = self.currentForecast?.city
+            
+            if let forecastCity = forecastCity, let cityLabel = cell.viewWithTag(100) as? UILabel {
+                cityLabel.text = forecastCity.name
+            }
+            
+            if let forecastCity = forecastCity, let cityLabel = cell.viewWithTag(101) as? UILabel {
+                cityLabel.text = forecastCity.country
+            }
+
+        } else {
+            
+            if let error = self.currentError {
+                
+                cell = tableView.dequeueReusableCell(withIdentifier: "ErrorCell", for: indexPath as IndexPath)
+                
+                if let errorLabel = cell.viewWithTag(100) as? UILabel {
+                    errorLabel.text = error.localizedDescription
+                }
+
+            } else {
+                
+                cell = tableView.dequeueReusableCell(withIdentifier: "ForecastCell", for: indexPath as IndexPath)
+                
+                let forecastInfo = self.currentForecast?.forecastData[rowNo-1]
+                
+                if let forecastInfo = forecastInfo, let forecastLabel = cell.viewWithTag(100) as? UILabel {
+                    
+                    var forecastText = forecastInfo.dateText + " • t: \(forecastInfo.temperature)"
+                    forecastText = forecastText + " • P: \(forecastInfo.pressure)"
+                    forecastText = forecastText + " • cloud %: \(forecastInfo.clouds)"
+                    forecastText = forecastText + " • Wind: \(forecastInfo.windDirection)"
+                    forecastText = forecastText + " - speed: \(forecastInfo.windSpeed)"
+
+                    forecastLabel.text = forecastText
+                }
+            }
+        }
+        return cell
+    }
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        if let currentForecast = self.currentForecast {
+            
+            let dataPoints = currentForecast.forecastData.count
+            
+            return dataPoints + 1
+        }
+        return 0
+    }
+}
+
+// MARK: - Table View Delegate
+
+extension FiveDaysWeatherForecastCoordinator: UITableViewDelegate {
+  
+    /*
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let indexPath = tableView.indexPathForSelectedRow
+        let currentCell = tableView.cellForRow(at: indexPath!)!
+        print(currentCell.textLabel!.text!)
+    }
+    */
 }

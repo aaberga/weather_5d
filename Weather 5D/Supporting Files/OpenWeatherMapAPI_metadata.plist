@@ -10,17 +10,17 @@
 		<dict>
 			<key>properties</key>
 			<dict>
-				<key>applicationName</key>
+				<key>city</key>
 				<dict>
 					<key>type</key>
 					<string>string</string>
 				</dict>
-				<key>buildCommit</key>
+				<key>lat</key>
 				<dict>
 					<key>type</key>
 					<string>string</string>
 				</dict>
-				<key>releaseVersion</key>
+				<key>lon</key>
 				<dict>
 					<key>type</key>
 					<string>string</string>
@@ -29,8 +29,6 @@
 			<key>type</key>
 			<string>object</string>
 		</dict>
-		<key>New item</key>
-		<string></string>
 		<key>ErrorObject</key>
 		<dict>
 			<key>properties</key>
