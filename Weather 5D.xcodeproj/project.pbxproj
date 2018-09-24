@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0E5B91792D4EA63ADCD2B55A /* Pods_Weather_5DTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24984755016795548C3829A9 /* Pods_Weather_5DTests.framework */; };
-		1BA1D4D82153FC1E00406F76 /* OpenWeatherMapAPI_metadata.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1BA1D4D72153FC1E00406F76 /* OpenWeatherMapAPI_metadata.plist */; };
 		1BA1D4DA215407E200406F76 /* OpenWeatherMapSampleData.json in Resources */ = {isa = PBXBuildFile; fileRef = 1BA1D4D9215407E200406F76 /* OpenWeatherMapSampleData.json */; };
 		1BAC124C2158F89000CBB77D /* LoggingMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BAC124B2158F89000CBB77D /* LoggingMethods.swift */; };
 		1BAC124E2159063900CBB77D /* OpenWeatherMap_5Days_API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BAC124D2159063900CBB77D /* OpenWeatherMap_5Days_API.swift */; };
@@ -42,7 +41,6 @@
 
 /* Begin PBXFileReference section */
 		06A7365F7D2A4222C7A3BE4B /* Pods-Weather 5D.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Weather 5D.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Weather 5D/Pods-Weather 5D.debug.xcconfig"; sourceTree = "<group>"; };
-		1BA1D4D72153FC1E00406F76 /* OpenWeatherMapAPI_metadata.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = OpenWeatherMapAPI_metadata.plist; sourceTree = "<group>"; };
 		1BA1D4D9215407E200406F76 /* OpenWeatherMapSampleData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = OpenWeatherMapSampleData.json; sourceTree = "<group>"; };
 		1BAC124B2158F89000CBB77D /* LoggingMethods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggingMethods.swift; sourceTree = "<group>"; };
 		1BAC124D2159063900CBB77D /* OpenWeatherMap_5Days_API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenWeatherMap_5Days_API.swift; sourceTree = "<group>"; };
@@ -104,7 +102,6 @@
 			isa = PBXGroup;
 			children = (
 				1BA1D4D9215407E200406F76 /* OpenWeatherMapSampleData.json */,
-				1BA1D4D72153FC1E00406F76 /* OpenWeatherMapAPI_metadata.plist */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -303,7 +300,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1BA1D4DA215407E200406F76 /* OpenWeatherMapSampleData.json in Resources */,
-				1BA1D4D82153FC1E00406F76 /* OpenWeatherMapAPI_metadata.plist in Resources */,
 				1BD626DE2152AEF300C1CE78 /* LaunchScreen.storyboard in Resources */,
 				1BD626DB2152AEF300C1CE78 /* Assets.xcassets in Resources */,
 				1BD626D92152AEF000C1CE78 /* Main.storyboard in Resources */,
