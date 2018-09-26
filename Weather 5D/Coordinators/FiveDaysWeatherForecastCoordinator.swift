@@ -135,12 +135,31 @@ extension FiveDaysWeatherForecastCoordinator: UITableViewDataSource {
                 
                 if let forecastInfo = forecastInfo, let forecastLabel = cell.viewWithTag(100) as? UILabel {
                     
-                    var forecastText = forecastInfo.dateText + " • t: \(forecastInfo.temperature)"
-                    forecastText = forecastText + " • P: \(forecastInfo.pressure)"
-                    forecastText = forecastText + " • cloud %: \(forecastInfo.clouds)"
-                    forecastText = forecastText + " • Wind: \(forecastInfo.windDirection)"
-                    forecastText = forecastText + " - speed: \(forecastInfo.windSpeed)"
-
+                    let forecastText = forecastInfo.dateText + " - \(forecastInfo.weatherText)"
+                    forecastLabel.text = forecastText
+                }
+                
+                if let forecastInfo = forecastInfo, let forecastLabel = cell.viewWithTag(101) as? UILabel {
+                    
+                    let forecastText = String((forecastInfo.temperature - 272.15).rounded(toPlaces: 0))
+                    forecastLabel.text = forecastText
+                }
+                
+                if let forecastInfo = forecastInfo, let forecastLabel = cell.viewWithTag(102) as? UILabel {
+                    
+                    let forecastText = String(forecastInfo.pressure.rounded(toPlaces: 1))
+                    forecastLabel.text = forecastText
+                }
+                
+                if let forecastInfo = forecastInfo, let forecastLabel = cell.viewWithTag(103) as? UILabel {
+                    
+                    let forecastText = String(forecastInfo.clouds.rounded(toPlaces: 1))
+                    forecastLabel.text = forecastText
+                }
+                
+                if let forecastInfo = forecastInfo, let forecastLabel = cell.viewWithTag(104) as? UILabel {
+                    
+                    let forecastText = String(forecastInfo.windSpeed.rounded(toPlaces: 1)) + " / " + String(forecastInfo.windDirection.rounded(toPlaces: 1))
                     forecastLabel.text = forecastText
                 }
             }
