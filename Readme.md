@@ -27,3 +27,7 @@ b) Coordinator Tutorial for iOS: Getting Started
 
 The idea about confining any API call logic *out* of the coordinators, in its own layer, is an improvement on a pure coordinators based architecture.
 
+
+Cloned & Repurposed Here:
+
+https://github.com/aaberga/MovieDB
